@@ -18,575 +18,669 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Manish Kumar",
-    "jobTitle": "Full-Stack Engineer",
-    "email": "mailto:manishprajapat01997@gmail.com",
-    "url": "https://your-domain.example/",
-    "sameAs": [
-      "https://github.com/manishprajapat01997",
-      "https://www.linkedin.com/in/manish-kumar-prajapat-248757282/"
-    ],
-    "knowsAbout": ["Python", "Django", "DRF", "WebSockets", "Celery", "React", "PostgreSQL", "MySQL", "AWS", "GCP", "Docker", "Kubernetes", "Redis", "RabbitMQ"]
-  }
-  </script>
-
-  <style>
-    /* ---------- THEME ---------- */
-    :root{
-      --bg:#0b1220;--bg-elev:#0f172a;--card:#111a2e;--text:#e9f0fb;--muted:#9fb0c9;--brand:#60a5fa;--accent:#22d3ee;--ring:54 120 255;--border:155 169 196;--radius:16px;--shadow:0 10px 35px rgba(2,6,23,.45)
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Manish Kumar",
+        "jobTitle": "Full-Stack Engineer",
+        "email": "mailto:manishprajapat01997@gmail.com",
+        "url": "https://your-domain.example/",
+        "sameAs": [
+        "https://github.com/manishprajapat01997",
+        "https://www.linkedin.com/in/manish-kumar-prajapat-248757282/"
+        ],
+        "knowsAbout": ["Python", "Django", "DRF", "WebSockets", "Celery", "React", "PostgreSQL", "MySQL", "AWS", "GCP", "Docker", "Kubernetes", "Redis", "RabbitMQ"]
     }
-    html[data-theme="light"]{--bg:#f6f9ff;--bg-elev:#fff;--card:#fff;--text:#0f172a;--muted:#5b6b86;--brand:#2563eb;--accent:#06b6d4;--shadow:0 20px 40px rgba(36,54,94,.15)}
-    @media (prefers-color-scheme: light){ html[data-theme="system"]{--bg:#f6f9ff;--bg-elev:#fff;--card:#fff;--text:#0f172a;--muted:#5b6b86;--brand:#2563eb;--accent:#06b6d4;--shadow:0 20px 40px rgba(36,54,94,.15)} }
+    </script>
 
-    /* ---------- RESET ---------- */
-    *,*::before,*::after{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(1200px 800px at 10% -10%, rgba(34,211,238,.08), transparent 40%),radial-gradient(1200px 800px at 110% 10%, rgba(96,165,250,.09), transparent 40%),var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    button{font:inherit}
+    <style>
+        /* ---------- THEME ---------- */
+        :root{
+        --bg:#0b1220;--bg-elev:#0f172a;--card:#111a2e;--text:#e9f0fb;--muted:#9fb0c9;--brand:#60a5fa;--accent:#22d3ee;--ring:54 120 255;--border:155 169 196;--radius:16px;--shadow:0 10px 35px rgba(2,6,23,.45)
+        }
+        html[data-theme="light"]{--bg:#f6f9ff;--bg-elev:#fff;--card:#fff;--text:#0f172a;--muted:#5b6b86;--brand:#2563eb;--accent:#06b6d4;--shadow:0 20px 40px rgba(36,54,94,.15)}
+        @media (prefers-color-scheme: light){ html[data-theme="system"]{--bg:#f6f9ff;--bg-elev:#fff;--card:#fff;--text:#0f172a;--muted:#5b6b86;--brand:#2563eb;--accent:#06b6d4;--shadow:0 20px 40px rgba(36,54,94,.15)} }
 
-    /* ---------- UTIL ---------- */
-    .container{max-width:1180px;margin-inline:auto;padding:24px 16px}
-    .grid{display:grid;gap:16px}
-    .cols{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-    .elev{background:var(--bg-elev);border:1px solid rgba(var(--border),.18);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .muted{color:var(--muted)}
-    .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+        /* ---------- RESET ---------- */
+        *,*::before,*::after{box-sizing:border-box}
+        html,body{height:100%}
+        body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(1200px 800px at 10% -10%, rgba(34,211,238,.08), transparent 40%),radial-gradient(1200px 800px at 110% 10%, rgba(96,165,250,.09), transparent 40%),var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+        a{color:inherit;text-decoration:none}
+        img{max-width:100%;display:block}
+        button{font:inherit}
 
-    /* ---------- NAV ---------- */
-    /* header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);background:rgba(8,14,29,.6);border-bottom:1px solid rgba(var(--border),.14)} */
-    body > header {position: fixed; top: 0;left: 0; right: 0; width: 100%; z-index: 1000; backdrop-filter: saturate(140%) blur(10px);
-                    background: rgba(8,14,29,.6); border-bottom: 1px solid rgba(var(--border),.14);}
-    
-    html[data-theme="light"] header{background:rgba(255,255,255,.7)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;max-width:1180px;margin:auto}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
-    .logo{width:40px;height:40px;border-radius:12px;background:conic-gradient(from 190deg at 70% 30%, var(--brand), var(--accent));display:grid;place-items:center;color:#0b1220;font-weight:900;box-shadow:0 6px 18px rgba(96,165,250,.35)}
-    nav .links{display:flex;gap:8px;align-items:center}
-    .btn{padding:.6rem 1rem;border:1px solid rgba(var(--border),.28);border-radius:12px;background:transparent;color:inherit;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;cursor:pointer}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:#071225;font-weight:700;border-color:transparent}
-    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.25)}
-    .icon-btn{display:inline-grid;place-items:center;padding:.5rem;border-radius:10px;border:1px solid transparent}
-    .icon-btn:hover{border-color:rgba(var(--border),.28)}
+        /* ---------- UTIL ---------- */
+        .container{max-width:1180px;margin-inline:auto;padding:24px 16px}
+        .grid{display:grid;gap:16px}
+        .cols{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+        .elev{background:var(--bg-elev);border:1px solid rgba(var(--border),.18);border-radius:var(--radius);box-shadow:var(--shadow)}
+        .muted{color:var(--muted)}
+        .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
 
-    /* Mobile menu */
-    #menuToggle{display:none}
-    .hamburger{display:none}
-    @media (max-width:860px){
-      .links{display:none}
-      .hamburger{display:inline-grid}
-      #menuToggle:checked ~ .drawer{transform:translateY(0);opacity:1;pointer-events:auto}
-      .drawer{position:fixed;inset:56px 0 auto 0;background:var(--bg-elev);border-bottom:1px solid rgba(var(--border),.18);transform:translateY(-12px);opacity:0;pointer-events:none;transition:.2s ease;}
-      .drawer .links{display:grid;gap:8px;padding:16px}
-    }
+        /* ---------- NAV ---------- */
+        /* header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);background:rgba(8,14,29,.6);border-bottom:1px solid rgba(var(--border),.14)} */
+        body > header {position: fixed; top: 0;left: 0; right: 0; width: 100%; z-index: 1000; backdrop-filter: saturate(140%) blur(10px);
+                        background: rgba(8,14,29,.6); border-bottom: 1px solid rgba(var(--border),.14);}
+        
+        html[data-theme="light"] header{background:rgba(255,255,255,.7)}
 
-    /* ---------- HERO ---------- */
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
-    .hero-card{padding:20px;border-radius:var(--radius)}
-    .kicker{display:inline-flex;gap:8px;align-items:center;font-size:.9rem;color:var(--muted);border:1px solid rgba(var(--border),.22);padding:.4rem .8rem;border-radius:999px}
-    h1{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:12px 0 8px}
-    .lead{color:var(--muted);font-size:1.05rem}
-    .actions{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px}
-    .profile{display:grid;place-items:center}
-    .profile-pic{width:min(260px,70vw);aspect-ratio:1/1;border-radius:50%;object-fit:cover;border:4px solid var(--brand);box-shadow:0 0 0 6px rgba(96,165,250,.18),0 18px 40px rgba(0,0,0,.45);transition:transform .35s ease}
-    .profile-pic:hover{transform:rotate(-1.5deg) scale(1.03)}
-    @media (max-width:960px){.hero{grid-template-columns:1fr}}
+        
+        .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;max-width:1180px;margin:auto}
+        .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+        .logo{width:40px;height:40px;border-radius:12px;background:conic-gradient(from 190deg at 70% 30%, var(--brand), var(--accent));display:grid;place-items:center;color:#0b1220;font-weight:900;box-shadow:0 6px 18px rgba(96,165,250,.35)}
+        nav .links{display:flex;gap:8px;align-items:center}
+        .btn{padding:.6rem 1rem;border:1px solid rgba(var(--border),.28);border-radius:12px;background:transparent;color:inherit;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;cursor:pointer}
+        .btn.primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:#071225;font-weight:700;border-color:transparent}
+        .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+        .icon-btn{display:inline-grid;place-items:center;padding:.5rem;border-radius:10px;border:1px solid transparent}
+        .icon-btn:hover{border-color:rgba(var(--border),.28)}
 
-    /* ---------- SECTIONS ---------- */
-    section{margin-top:48px}
-    section>h2{font-size:1.6rem;margin:0 0 12px}
-    .pill{display:inline-block;padding:.35rem .7rem;border:1px solid rgba(var(--border),.18);border-radius:999px;font-size:.8rem;color:var(--muted)}
+        /* Mobile menu */
+        #menuToggle{display:none}
+        .hamburger{display:none}
+        @media (max-width:860px){
+        .links{display:none}
+        .hamburger{display:inline-grid}
+        #menuToggle:checked ~ .drawer{transform:translateY(0);opacity:1;pointer-events:auto}
+        .drawer{position:fixed;inset:56px 0 auto 0;background:var(--bg-elev);border-bottom:1px solid rgba(var(--border),.18);transform:translateY(-12px);opacity:0;pointer-events:none;transition:.2s ease;}
+        .drawer .links{display:grid;gap:8px;padding:16px}
+        }
 
-    /* Project cards */
-    .project{position:relative;overflow:hidden;padding:16px;border-radius:var(--radius);transition:transform .2s ease, box-shadow .2s ease;border:1px solid rgba(var(--border),.16)}
-    .project:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.35)}
-    .project h3{margin:0 0 6px;font-size:1.05rem}
-    .project .stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .badge{background:rgba(15,23,42,.6);border:1px solid rgba(var(--border),.22);padding:.28rem .6rem;border-radius:999px;font-size:.75rem}
-    html[data-theme="light"] .badge{background:#f3f6ff}
+        /* ---------- HERO ---------- */
+        .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+        .hero-card{padding:20px;border-radius:var(--radius)}
+        .kicker{display:inline-flex;gap:8px;align-items:center;font-size:.9rem;color:var(--muted);border:1px solid rgba(var(--border),.22);padding:.4rem .8rem;border-radius:999px}
+        h1{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:12px 0 8px}
+        .lead{color:var(--muted);font-size:1.05rem}
+        .actions{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px}
+        .profile{display:grid;place-items:center}
+        .profile-pic{width:min(260px,70vw);aspect-ratio:1/1;border-radius:50%;object-fit:cover;border:4px solid var(--brand);box-shadow:0 0 0 6px rgba(96,165,250,.18),0 18px 40px rgba(0,0,0,.45);transition:transform .35s ease}
+        .profile-pic:hover{transform:rotate(-1.5deg) scale(1.03)}
+        @media (max-width:960px){.hero{grid-template-columns:1fr}}
 
-    /* Timeline */
-    .timeline-item{padding:16px;border-radius:var(--radius);border:1px solid rgba(var(--border),.16)}
-    .meta{font-size:.9rem;color:var(--muted);margin:.2rem 0 .4rem}
+        /* ---------- SECTIONS ---------- */
+        section{margin-top:48px}
+        section>h2{font-size:1.6rem;margin:0 0 12px}
+        .pill{display:inline-block;padding:.35rem .7rem;border:1px solid rgba(var(--border),.18);border-radius:999px;font-size:.8rem;color:var(--muted)}
 
-    /* Skills */
-    .chips{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{padding:.45rem .7rem;border-radius:999px;border:1px solid rgba(var(--border),.22);background:linear-gradient(180deg, rgba(255,255,255,.04), transparent);font-size:.9rem}
+        /* Project cards */
+        .project{position:relative;overflow:hidden;padding:16px;border-radius:var(--radius);transition:transform .2s ease, box-shadow .2s ease;border:1px solid rgba(var(--border),.16)}
+        .project:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.35)}
+        .project h3{margin:0 0 6px;font-size:1.05rem}
+        .project .stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+        .badge{background:rgba(15,23,42,.6);border:1px solid rgba(var(--border),.22);padding:.28rem .6rem;border-radius:999px;font-size:.75rem}
+        html[data-theme="light"] .badge{background:#f3f6ff}
 
-    /* Contact */
-    form{display:grid;gap:12px}
-    .input, textarea{width:100%;padding:.75rem;border:1px solid rgba(var(--border),.28);border-radius:12px;background:color-mix(in oklab, var(--bg), #000 6%);color:inherit}
-    .input:focus, textarea:focus{outline:none;box-shadow:0 0 0 4px rgba(var(--ring)/.28);border-color:rgba(var(--ring)/.8)}
+        /* Timeline */
+        .timeline-item{padding:16px;border-radius:var(--radius);border:1px solid rgba(var(--border),.16)}
+        .meta{font-size:.9rem;color:var(--muted);margin:.2rem 0 .4rem}
 
-    /* Footer */
-    footer{margin-top:56px;padding:20px 0;border-top:1px solid rgba(var(--border),.14);text-align:center;color:var(--muted)}
+        /* Skills */
+        .chips{display:flex;flex-wrap:wrap;gap:8px}
+        .chip{padding:.45rem .7rem;border-radius:999px;border:1px solid rgba(var(--border),.22);background:linear-gradient(180deg, rgba(255,255,255,.04), transparent);font-size:.9rem}
 
-    /* Scroll reveal */
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
-    .reveal.show{opacity:1;transform:none}
-    @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none}.btn,.project{transition:none}}
+        /* Contact */
+        form{display:grid;gap:12px}
+        .input, textarea{width:100%;padding:.75rem;border:1px solid rgba(var(--border),.28);border-radius:12px;background:color-mix(in oklab, var(--bg), #000 6%);color:inherit}
+        .input:focus, textarea:focus{outline:none;box-shadow:0 0 0 4px rgba(var(--ring)/.28);border-color:rgba(var(--ring)/.8)}
 
-    /* Back to top */
-    #toTop{position:fixed;right:16px;bottom:16px;z-index:60;opacity:0;transform:translateY(8px);transition:.2s}
-    #toTop.show{opacity:1;transform:none}
+        /* Footer */
+        footer{margin-top:56px;padding:20px 0;border-top:1px solid rgba(var(--border),.14);text-align:center;color:var(--muted)}
 
-    /* Logos strip */
-    .logos{display:grid;grid-auto-flow:column;gap:24px;overflow:auto;padding:10px}
-    .logo-badge{padding:8px 12px;border:1px dashed rgba(var(--border),.25);border-radius:10px;white-space:nowrap;font-size:.9rem;color:var(--muted)}
+        /* Scroll reveal */
+        .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+        .reveal.show{opacity:1;transform:none}
+        @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none}.btn,.project{transition:none}}
 
-    /* Github button special color */
-    .github-btn {
-      background: #6498d6;   /* GitHub dark background */
-      color: #ffffff;        /* White text */
-      border-color: transparent;
-      font-weight: 600;
-    }
+        /* Back to top */
+        #toTop{position:fixed;right:16px;bottom:16px;z-index:60;opacity:0;transform:translateY(8px);transition:.2s}
+        #toTop.show{opacity:1;transform:none}
 
-    /* On hover */
-    .github-btn:hover {
-      background: #a5abb2;   /* Slightly lighter shade */
-      color: #ffffff;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.4);
-    }
+        /* Logos strip */
+        .logos{display:grid;grid-auto-flow:column;gap:24px;overflow:auto;padding:10px}
+        .logo-badge{padding:8px 12px;border:1px dashed rgba(var(--border),.25);border-radius:10px;white-space:nowrap;font-size:.9rem;color:var(--muted)}
 
+        /* Github button special color */
+        .github-btn {
+        background: #6498d6;   /* GitHub dark background */
+        color: #ffffff;        /* White text */
+        border-color: transparent;
+        font-weight: 600;
+        }
 
-</style>
-</head>
-<body>
-  <a class="visually-hidden" href="#main">Skip to content</a>
-  <header>
-    <div class="nav">
-      <a href="#top" class="brand" aria-label="Go to top">
-        <span class="logo" aria-hidden="true">MK</span>
-        <span>Manish Kumar</span>
-      </a>
-      <div class="links" role="navigation" aria-label="Primary">
-        <a class="btn" href="#projects">Projects</a>
-        <a class="btn" href="#experience">Experience</a>
-        <a class="btn" href="#skills">Skills</a>
-        <a class="btn" href="#contact">Contact</a>
-        <button id="themeToggle" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">🌓</button>
-        <a class="btn primary" href="resume.pdf" download>Download CV</a>
-      </div>
-      <label class="hamburger" for="menuToggle" aria-label="Open menu" title="Menu">🍔</label>
-      <input type="checkbox" id="menuToggle" aria-hidden="true" />
-    </div>
- 
-  </header>
+        /* On hover */
+        .github-btn:hover {
+        background: #a5abb2;   /* Slightly lighter shade */
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+        }
 
-  <main id="main" class="container">
-    <!-- HERO -->
-    <section id="top" class="hero reveal elev" style="padding:24px;">
-      <div class="hero-card">
-        <span class="kicker">Python • Django • DRF • Celery • WebSockets • HTML/CSS/JS • PostgreSQL</span>
-         <h1>Designing Scalable, Reliable, and Automated Web Solutions for Global Teams</h1>
-         <!--
-          Scalable: Systems can efficiently grow as the user base or data increases.
-          Automated: Highlights your expertise in automation and workflow efficiency.
-          Stack Mention: Python, Django, DRF – directly showcases your technical skills in the portfolio.
-          Global Teams: Gives the impression of working with worldwide clients and large-scale systems.
-         -->
+        /* ---------- Drawer (mobile menu) ---------- */
+        .drawer {
+            position: fixed;
+            top: 56px;
+            left: 0;
+            right: 0;
+            background: var(--bg-elev);
+            border-bottom: 1px solid rgba(var(--border),.18);
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform .3s ease, opacity .3s ease;
+            z-index: 999;
+        }
+        .drawer.active {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .drawer .links {
+            display: grid;
+            gap: 10px;
+            padding: 16px;
+        }
 
+        /* ---------- Hamburger ---------- */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 6px 10px;
+            border: none;
+            background: transparent;
+            border-radius: 8px;
+            color: black;                /* Light mode black */
+        }
 
-        <p class="lead">
-          I’m <strong>Manish Kumar</strong>, a <strong>Full-Stack Developer</strong> with 
-          <strong>3+ years</strong> of experience in backend engineering, automation, and modern web development. 
-          Experienced in delivering high-performance APIs, real-time systems, and product-based solutions.
-        </p>
-        <div class="actions" style="margin-top:16px;">
-          <a class="btn primary" href="#projects" aria-label="View projects">See Case Studies</a>
-          <button class="btn github-btn" id="copyEmail">Copy Email</button>
-          <a class="btn github-btn" href="https://github.com/manishprajapat01997" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn github-btn" href="https://www.linkedin.com/in/manish-kumar-prajapat-248757282/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-      <div class="profile" style="text-align:center; margin-top:24px;">
-        <img class="profile-pic" src="manish.JPG" alt="Portrait of Manish Kumar" loading="lazy" decoding="async" 
-            style="border-radius:50%; max-width:180px; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
-      </div>
-    </section>
+        [data-theme="dark"] .hamburger {
+        color: white;                /* Dark mode  white */
+        }
 
-    <!-- SUMMARY -->
-      <section id="about" class="reveal elev" aria-labelledby="summary-title" style="padding:24px">
-        <h2 id="summary-title">Professional Summary</h2>
-        <p>
-          I am a highly skilled <strong>Backend Developer</strong> with 3+ years of industry experience, 
-          specializing in <strong>Python, Django, and Django REST Framework</strong>. My expertise lies 
-          in building scalable, secure, and production-ready applications with a strong focus on 
-          <strong>automation, data processing, and system integration</strong>. 
-          Currently, I am contributing to <strong>Intelligere</strong>, an intelligent accounting 
-          automation platform developed at <strong>Digital Documentation Systems Pvt Ltd</strong>, 
-          a product-based company, delivering up to <strong>80% efficiency improvement</strong> for 
-          finance teams and Chartered Accountants.
-        </p>
-        <ul>
-          <li>Develop and maintain robust <strong>RESTful APIs</strong> and task automation pipelines using Django, DRF, Celery, and Redis.</li>
-          <li>Process and clean financial data from multiple formats (<strong>CSV, PDF, XML</strong>) using Pandas and NumPy.</li>
-          <li>Implement <strong>email automation</strong>, reporting systems, and seamless integration with <strong>Tally ERP</strong> (via XML connectors).</li>
-          <li>Optimize relational databases (<strong>PostgreSQL/MySQL</strong>) for handling large-scale financial data.</li>
-          <li>Deploy backend services on <strong>AWS</strong> with GitHub-driven pipelines and Docker-based workflows.</li>
-        </ul>
-      </section>
+        @media (max-width: 860px) {
+            .desktop-links { display: none; }
+            .hamburger { display: inline-block; }
+        }
+
+    </style>
 
 
-
-    <!-- PROJECTS / CASE STUDIES -->
-    <section id="projects" class="reveal" aria-labelledby="projects-title">
-      <h2 id="projects-title">Selected Case Studies</h2>
-      <div class="grid cols">
-
-        <!-- Intelligere Project -->
-        <article class="project elev">
-          <header>
-            <h3>Intelligere — Automated Accounting & Tally Integration</h3>
-            <p class="muted">
-              An intelligent accounting automation software designed to eliminate manual tasks, 
-              seamlessly integrate with Tally ERP, and deliver high accuracy for finance teams.
-            </p>
-          </header>
-
-          <p>
-            <strong>Project Summary:</strong> Intelligere is a modular accounting automation platform 
-            built for Chartered Accountants (CAs), MSMEs, and finance teams. 
-            It automates manual workflows and integrates directly with Tally ERP, 
-            delivering up to <strong>85% improvement in operational efficiency</strong>.
-          </p>
-
-          <h4>Key Features / Modules:</h4>
-          <div class="stack">
-            <span class="badge">Bank Statement</span>
-            <span class="badge">Invoice Create</span>
-            <span class="badge">GST Compare</span>
-            <span class="badge">Sales Entries</span>
-            <span class="badge">B2B Entries</span>
-            <span class="badge">CNDN Entries</span>
-            <span class="badge">Invoice Import</span>
-            <span class="badge">Amount Distribution</span>
-            <span class="badge">Ledger Export</span>
-            <span class="badge">DocuVault</span>
-            <span class="badge">Payables &amp; Receivables</span>
-            <span class="badge">Biz Dox</span>
-            <span class="badge"><li>Automatic logging for Tally voucher entries (success, errors, exceptions) — stored 
-                                    locally per application folder, similar to Tally’s IRN files.</li> </span>
-          </div>
-
-          <h4>Technology Stack:</h4>
-          <div class="stack">
-            <span class="badge">Python</span>
-            <span class="badge">Django</span>
-            <span class="badge">DRF</span>
-            <span class="badge">Celery</span>
-            <span class="badge">Redis</span>
-            <span class="badge">PostgreSQL</span>
-            <span class="badge">WebSockets</span>
-            <span class="badge">React</span>
-            <span class="badge">Tally ERP</span>
-            <span class="badge">EXE Integration</span>
-            <span class="badge">XML</span>
-          </div>
-
-          <h4>Live Website:</h4>
-          <p>
-            🌐 <a href="https://www.digitaldocsys.in/" target="_blank">www.digitaldocsys.in</a>
-          </p>
-        </article>
-
-        <!-- Other Projects (as before) -->
-       <article class="project elev">
-          <header>
-            <h3>Task Management (Intelligere CRM)</h3>
-            <p class="muted">
-              Comprehensive workflow & CRM platform with multi-level role-based access control — 
-              engineered for high performance, security, and seamless scalability across growing teams 
-              and large organizations alike.
-            </p>
-
-          </header>
-          <ul>
-            <li>
-              <strong>Hierarchical RBAC:</strong> Admin → City Head → Channel Manager → Premium Partner → 
-              Super Distributor → Distributor → Salesman → End User.
-            </li>
-            <li>
-              <strong>Lead & Customer Management:</strong> Automated routing, escalations, and smart conversions 
-              with transparent tracking.<br>
-              📞 <em>Built-in Call Lock:</em> When a customer is being called, that lead is hidden from all other 
-              agents until the call ends or is marked unattended.
-            </li>
-            <li>
-              <strong>Sales & Commission Engine:</strong> Automated monthly commission reports with nested 
-              hierarchy drill-downs.
-            </li>
-            <li>
-              <strong>Dashboards & Reports:</strong> Role-specific KPIs, XLS/PDF exports, and real-time 
-              activity logs.
-            </li>
-            <li>
-              <strong>Email Automation:</strong> Bulk HTML campaigns via AWS with dynamic 
-              templates.
-            </li>
-          </ul>
-          <div class="stack">
-            <span class="badge">Django</span>
-            <span class="badge">PostgreSQL</span>
-            <span class="badge">Role-Based Access Control</span>
-            <span class="badge">OAuth2 / JWT</span>
-            <span class="badge">AWS Boto3</span>
-            <span class="badge">Charts</span>
-            <span class="badge">Automation</span>
-            <span class="badge">Telephony</span>
-          </div>
-        </article>
-
-        <!-- GravityTech Projects -->
-
-        <article class="project elev">
-          <header>
-            <h3>General Healthcare Service</h3>
-            <p class="muted">
-              Healthcare management software for patient onboarding, staff scheduling, and record automation with secure access controls.
-            </p>
-          </header>
-          <ul>
-            <li>Generates **unique patient IDs** and automates record-keeping for patients and staff.</li>
-            <li>Efficiently collects patient information, diagnosis details, and treatment history.</li>
-            <li>Provides search & tracking for **room status, doctor availability**, and patient details via IDs.</li>
-            <li>Implemented **role-based access** and JWT-secured APIs for data privacy.</li>
-            <li>Reduced appointment conflicts by ~25% through schedule validation and automated notifications.</li>
-          </ul>
-          <div class="stack">
-            <span class="badge">Django</span>
-            <span class="badge">DRF</span>
-            <span class="badge">React</span>
-            <span class="badge">JWT</span>
-            <span class="badge">MySQL</span>
-          </div>
-        </article>
-
-        <article class="project elev">
-          <header>
-            <h3>Wood & Furniture Loan Platform</h3>
-            <p class="muted">
-              E-commerce platform for modular wood and furniture loan management, enhancing online shopping and order lifecycle.
-            </p>
-          </header>
-          <ul>
-            <li>Managed end-to-end credit workflows and order lifecycle using service-layer architecture (DTO + MVT).</li>
-            <li>Integrated **payment gateways** with retry & idempotency for secure transactions.</li>
-            <li>Improved checkout stability, achieving **+12% cart-to-order conversion**.</li>
-            <li>Supported modular furniture selections and optimized inventory for online store efficiency.</li>
-          </ul>
-          <div class="stack">
-            <span class="badge">Django</span>
-            <span class="badge">DRF</span>
-            <span class="badge">React</span>
-            <span class="badge">MySQL</span>
-            <span class="badge">Flask</span>
-          </div>
-        </article>
-      </div>
-    </section>
+    <body>
+        <a class="visually-hidden" href="#main">Skip to content</a>
+        <header>
+            <div class="nav">
+                <a href="#top" class="brand" aria-label="Go to top">
+                <span class="logo" aria-hidden="true">MK</span>
+                <span>Manish Kumar</span>
+                </a>
+                <!-- Desktop Links -->
+                <div class="links desktop-links" role="navigation" aria-label="Primary">
+                <a class="btn" href="#projects">Projects</a>
+                <a class="btn" href="#experience">Experience</a>
+                <a class="btn" href="#skills">Skills</a>
+                <a class="btn" href="#contact">Contact</a>
+                <button id="themeToggle" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">🌓</button>
+                <a class="btn primary" href="resume.pdf" download>Download CV</a>
+                </div>
+                <!-- Hamburger -->
+                <button class="hamburger" id="menuBtn" aria-label="Open menu" title="Menu">☰</button>    
+            </div>
+            <!-- Mobile Drawer -->
+            <div class="drawer" id="mobileMenu">
+                <div class="links">
+                <a class="btn" href="#projects">Projects</a>
+                <a class="btn" href="#experience">Experience</a>
+                <a class="btn" href="#skills">Skills</a>
+                <a class="btn" href="#contact">Contact</a>
+                <a class="btn primary" href="resume.pdf" download>Download CV</a>
+                </div>
+            </div>
+        </header>
 
 
-    <!-- EXPERIENCE -->
-   
-    <section id="experience" class="reveal" aria-labelledby="exp-title">
-      <h2 id="exp-title">Experience</h2>
-      <div class="grid cols">
-
-        <!-- Current Company -->
-        <div class="timeline-item elev">
-          <h3>Web Developer — Digital Documentation Systems Pvt. Ltd</h3>
-          <div class="meta">Aug 2023 – Present · Remote‑first, product-based company</div>
-          <ul>
-            <li>Architected and maintained **DRF backends** with **Celery/Redis** for task automation and **WebSockets** for real-time notifications.</li>
-            <li>Processed large-scale financial data in **CSV, PDF, and XML formats**, enabling automated reconciliation and reporting for finance teams.</li>
-            <li>Designed **live notification systems** for workflow updates, improving operational efficiency and user engagement.</li>
-            <li>Developed structured logging and audit trails to support transparency and error tracking in production.</li>
-          </ul>
-        </div>
-
-        <!-- Previous Company -->
-        <div class="timeline-item elev">
-          <h3>Software Engineer — GravityTech</h3>
-          <div class="meta">Jan 2022 – Aug 2023</div>
-          <ul>
-            <li>Delivered Python services using **Django, Flask, DRF**, and **React** UIs; optimized ORM queries and database indexes for performance.</li>
-            <li>Owned database **migrations, schema design**, and **performance profiling** for MySQL-based applications.</li>
-            <li>Developed and maintained **Healthcare Management Portal** with patient onboarding, staff scheduling, and automated record-keeping.</li>
-            <li>Built **E-commerce Furniture Loan platform**, improving cart-to-order conversion by 12% and implementing secure payment workflows.</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
+        <main id="main" class="container">
+            <!-- HERO -->
+            <section id="top" class="hero reveal elev" style="padding:24px;">
+            <div class="hero-card">
+                <span class="kicker">Python • Django • DRF • Celery • WebSockets • HTML/CSS/JS • PostgreSQL</span>
+                <h1>Designing Scalable, Reliable, and Automated Web Solutions for Global Teams</h1>
+                <!--
+                Scalable: Systems can efficiently grow as the user base or data increases.
+                Automated: Highlights your expertise in automation and workflow efficiency.
+                Stack Mention: Python, Django, DRF – directly showcases your technical skills in the portfolio.
+                Global Teams: Gives the impression of working with worldwide clients and large-scale systems.
+                -->
 
 
-    <!-- SKILLS -->
-      <!-- SKILLS -->
-    <section id="skills" class="reveal elev" aria-labelledby="skills-title" style="padding:16px">
-      <h2 id="skills-title">Skills</h2>
-      <div class="grid">
-        <!-- Languages & Frameworks -->
-        <div>
-          <p class="pill" aria-hidden="true">Languages & Frameworks</p>
-          <div class="chips" aria-label="Languages and frameworks">
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="24"> Python</span>
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" width="24"> Django (DRF)</span>
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="24"> React.js</span>
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="24"> JavaScript</span>
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="24"> HTML5</span>
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="24"> CSS3</span>
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" width="24"> GitHub Actions</span>
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg"  width="24"> AWS</span>
-          </div>
-        </div>
+                <p class="lead">
+                I’m <strong>Manish Kumar</strong>, a <strong>Full-Stack Developer</strong> with 
+                <strong>3+ years</strong> of experience in backend engineering, automation, and modern web development. 
+                Experienced in delivering high-performance APIs, real-time systems, and product-based solutions.
+                </p>
+                <div class="actions" style="margin-top:16px;">
+                <a class="btn primary" href="#projects" aria-label="View projects">See Case Studies</a>
+                <button class="btn github-btn" id="copyEmail">Copy Email</button>
+                <a class="btn github-btn" href="https://github.com/manishprajapat01997" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn github-btn" href="https://www.linkedin.com/in/manish-kumar-prajapat-248757282/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+            </div>
+            <div class="profile" style="text-align:center; margin-top:24px;">
+                <img class="profile-pic" src="manish.JPG" alt="Portrait of Manish Kumar" loading="lazy" decoding="async" 
+                    style="border-radius:50%; max-width:180px; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
+            </div>
+            </section>
 
-        <div>
-        <!-- Data, Messaging & Automation -->
-        <div>
-          <p class="pill" aria-hidden="true">Data, Messaging & Automation</p>
-          <div class="chips" aria-label="Data and tools">
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" width="24"> PostgreSQL</span>
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="24"> MySQL/SQLite</span>
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" width="24"> Redis</span>
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" width="24"> Pandas / NumPy</span>            
-            <span class="chip">Matplotlib</span>
-            <span class="chip">Celery</span>
-          </div>
-        </div>
+            <!-- SUMMARY -->
+            <section id="about" class="reveal elev" aria-labelledby="summary-title" style="padding:24px">
+                <h2 id="summary-title">Professional Summary</h2>
+                <p>
+                I am a highly skilled <strong>Backend Developer</strong> with 3+ years of industry experience, 
+                specializing in <strong>Python, Django, and Django REST Framework</strong>. My expertise lies 
+                in building scalable, secure, and production-ready applications with a strong focus on 
+                <strong>automation, data processing, and system integration</strong>. 
+                Currently, I am contributing to <strong>Intelligere</strong>, an intelligent accounting 
+                automation platform developed at <strong>Digital Documentation Systems Pvt Ltd</strong>, 
+                a product-based company, delivering up to <strong>80% efficiency improvement</strong> for 
+                finance teams and Chartered Accountants.
+                </p>
+                <ul>
+                <li>Develop and maintain robust <strong>RESTful APIs</strong> and task automation pipelines using Django, DRF, Celery, and Redis.</li>
+                <li>Process and clean financial data from multiple formats (<strong>CSV, PDF, XML</strong>) using Pandas and NumPy.</li>
+                <li>Implement <strong>email automation</strong>, reporting systems, and seamless integration with <strong>Tally ERP</strong> (via XML connectors).</li>
+                <li>Optimize relational databases (<strong>PostgreSQL/MySQL</strong>) for handling large-scale financial data.</li>
+                <li>Deploy backend services on <strong>AWS</strong> with GitHub-driven pipelines and Docker-based workflows.</li>
+                </ul>
+            </section>
 
-        <!-- Other Tools -->
-        <div>
-          <p class="pill" aria-hidden="true">Other Tools & Utilities</p>
-          <div class="chips" aria-label="Other tools">            
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" width="24"> Postman</span>
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="VS Code" width="24"> VS Code</span>
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" alt="PyCharm" width="24"> PyCharm</span>
-            <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="24"> Git / GitHub</span>
-            <span class="chip">Tally ERP Integration</span>
-            <span class="chip">WebSockets</span>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="reveal" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact</h2>
-      <div class="grid cols">
-        <div class="elev" style="padding:16px">
-          <p><strong>Email:</strong> <a href="mailto:manishprajapat01997@gmail.com">manishprajapat01997@gmail.com</a></p>
-          <p><strong>Phone (Intl):</strong> <a href="tel:+919057640667">+91 90576 40667</a></p>
-          <p class="muted">Preference: remote‑first roles with overlapping hours; open to contract or full‑time.</p>
-          <div class="actions" style="margin-top:10px">
-            <a class="btn github-btn" href="https://www.linkedin.com/in/manish-kumar-prajapat-248757282/" target="_blank" rel="noopener" style="padding:10px 16px; border-radius:8px; background-color:#0077B5; color:#fff; text-decoration:none;">LinkedIn</a>
-            <a class="btn github-btn" href="https://github.com/manishprajapat01997" target="_blank" rel="noopener" style="padding:10px 16px; border-radius:8px; background-color:#333; color:#fff; text-decoration:none;">GitHub</a>
-            <a class="btn primary" href="resume.pdf" download>Download CV</a>
-          </div>
-        </div>
 
-        <!-- ===== CONTACT FORM ===== -->            
-        <form id="contact-form" class="elev" style="padding:16px; display:flex; flex-direction:column; gap:12px;">
+            <!-- PROJECTS / CASE STUDIES -->
+            <section id="projects" class="reveal" aria-labelledby="projects-title">
+            <h2 id="projects-title">Selected Case Studies</h2>
+            <div class="grid cols">
 
-          <!-- Name + Email in one line -->
-          <div style="display:flex; gap:12px; flex-wrap:wrap;">
-            <input type="text" name="user_name" required autocomplete="name" placeholder="Your Name"
-              style="flex:1; padding:10px; border-radius:8px; border:1px solid currentColor; background-color:inherit; color:inherit; font-size:14px;">
-            <input type="email" name="user_email" required autocomplete="email" placeholder="Your Email"
-              style="flex:1; padding:10px; border-radius:8px; border:1px solid currentColor; background-color:inherit; color:inherit; font-size:14px;">
-          </div>
+                <!-- Intelligere Project -->
+                <article class="project elev">
+                <header>
+                    <h3>Intelligere — Automated Accounting & Tally Integration</h3>
+                    <p class="muted">
+                    An intelligent accounting automation software designed to eliminate manual tasks, 
+                    seamlessly integrate with Tally ERP, and deliver high accuracy for finance teams.
+                    </p>
+                </header>
 
-          <!-- Message textarea -->
-          <textarea name="message" rows="5" required placeholder="Your Message"
-            style="padding:10px; border-radius:8px; border:1px solid currentColor; background-color:inherit; color:inherit; font-size:14px; resize:vertical;"></textarea>
+                <p>
+                    <strong>Project Summary:</strong> Intelligere is a modular accounting automation platform 
+                    built for Chartered Accountants (CAs), MSMEs, and finance teams. 
+                    It automates manual workflows and integrates directly with Tally ERP, 
+                    delivering up to <strong>85% improvement in operational efficiency</strong>.
+                </p>
 
-          <!-- Send Button aligned right -->
-        <div style="display:flex; justify-content:flex-end;">
-          <button type="submit" class="btn primary" 
-            style="padding:8px 16px; border-radius:8px; font-weight:bold; cursor:pointer; font-size:14px;">
-            Send
-          </button>
-        </div>
-        </form>
-      </div>
-    </section>
+                <h4>Key Features / Modules:</h4>
+                <div class="stack">
+                    <span class="badge">Bank Statement</span>
+                    <span class="badge">Invoice Create</span>
+                    <span class="badge">GST Compare</span>
+                    <span class="badge">Sales Entries</span>
+                    <span class="badge">B2B Entries</span>
+                    <span class="badge">CNDN Entries</span>
+                    <span class="badge">Invoice Import</span>
+                    <span class="badge">Amount Distribution</span>
+                    <span class="badge">Ledger Export</span>
+                    <span class="badge">DocuVault</span>
+                    <span class="badge">Payables &amp; Receivables</span>
+                    <span class="badge">Biz Dox</span>
+                    <span class="badge"><li>Automatic logging for Tally voucher entries (success, errors, exceptions) — stored 
+                                            locally per application folder, similar to Tally’s IRN files.</li> </span>
+                </div>
 
-    <footer class="container muted">© <span id="year"></span> Manish Kumar · All rights reserved</footer>
-  </main>
+                <h4>Technology Stack:</h4>
+                <div class="stack">
+                    <span class="badge">Python</span>
+                    <span class="badge">Django</span>
+                    <span class="badge">DRF</span>
+                    <span class="badge">Celery</span>
+                    <span class="badge">Redis</span>
+                    <span class="badge">PostgreSQL</span>
+                    <span class="badge">WebSockets</span>
+                    <span class="badge">React</span>
+                    <span class="badge">Tally ERP</span>
+                    <span class="badge">EXE Integration</span>
+                    <span class="badge">XML</span>
+                </div>
 
-  <button id="toTop" class="btn elev" aria-label="Back to top" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-<!-- ===== EMAILJS SCRIPT ===== -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  // Initialize EmailJS with your public key
-  emailjs.init("a2GctLfs4zBXWsOrt"); // <-- Replace with your EmailJS public key
+                <h4>Live Website:</h4>
+                <p>
+                    🌐 <a href="https://www.digitaldocsys.in/" target="_blank">www.digitaldocsys.in</a>
+                </p>
+                </article>
 
-  const form = document.getElementById("contact-form");
+                <!-- Other Projects (as before) -->
+            <article class="project elev">
+                <header>
+                    <h3>Task Management (Intelligere CRM)</h3>
+                    <p class="muted">
+                    Comprehensive workflow & CRM platform with multi-level role-based access control — 
+                    engineered for high performance, security, and seamless scalability across growing teams 
+                    and large organizations alike.
+                    </p>
 
-  form.addEventListener("submit", function(event) {
-    event.preventDefault(); // prevent default submission
+                </header>
+                <ul>
+                    <li>
+                    <strong>Hierarchical RBAC:</strong> Admin → City Head → Channel Manager → Premium Partner → 
+                    Super Distributor → Distributor → Salesman → End User.
+                    </li>
+                    <li>
+                    <strong>Lead & Customer Management:</strong> Automated routing, escalations, and smart conversions 
+                    with transparent tracking.<br>
+                    📞 <em>Built-in Call Lock:</em> When a customer is being called, that lead is hidden from all other 
+                    agents until the call ends or is marked unattended.
+                    </li>
+                    <li>
+                    <strong>Sales & Commission Engine:</strong> Automated monthly commission reports with nested 
+                    hierarchy drill-downs.
+                    </li>
+                    <li>
+                    <strong>Dashboards & Reports:</strong> Role-specific KPIs, XLS/PDF exports, and real-time 
+                    activity logs.
+                    </li>
+                    <li>
+                    <strong>Email Automation:</strong> Bulk HTML campaigns via AWS (1000+ emails/min) with dynamic 
+                    templates.
+                    </li>
+                </ul>
+                <div class="stack">
+                    <span class="badge">Django</span>
+                    <span class="badge">PostgreSQL</span>
+                    <span class="badge">Role-Based Access Control</span>
+                    <span class="badge">OAuth2 / JWT</span>
+                    <span class="badge">AWS Boto3</span>
+                    <span class="badge">Charts</span>
+                    <span class="badge">Automation</span>
+                    <span class="badge">Telephony</span>
+                </div>
+                </article>
 
-    emailjs.sendForm("service_75r1c0f", "template_208uf8c", this)
-      .then(() => {
-        alert("✅ Message sent successfully!");
-        form.reset();            // clear form fields
-        window.location.reload(); // refresh page
-      })
-      .catch((err) => {
-        alert("❌ Failed to send message: " + JSON.stringify(err));
-        console.error(err);
-      });
-  });
-</script>
+                <!-- GravityTech Projects -->
 
-<script>
-  // Current year
-  document.getElementById('year').textContent = new Date().getFullYear();
-  // Scroll reveal
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
-  }, { threshold: .18 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+                <article class="project elev">
+                <header>
+                    <h3>General Healthcare Service</h3>
+                    <p class="muted">
+                    Healthcare management software for patient onboarding, staff scheduling, and record automation with secure access controls.
+                    </p>
+                </header>
+                <ul>
+                    <li>Generates **unique patient IDs** and automates record-keeping for patients and staff.</li>
+                    <li>Efficiently collects patient information, diagnosis details, and treatment history.</li>
+                    <li>Provides search & tracking for **room status, doctor availability**, and patient details via IDs.</li>
+                    <li>Implemented **role-based access** and JWT-secured APIs for data privacy.</li>
+                    <li>Reduced appointment conflicts by ~25% through schedule validation and automated notifications.</li>
+                </ul>
+                <div class="stack">
+                    <span class="badge">Django</span>
+                    <span class="badge">DRF</span>
+                    <span class="badge">React</span>
+                    <span class="badge">JWT</span>
+                    <span class="badge">MySQL</span>
+                </div>
+                </article>
 
-  // Copy email interaction
-  const copyBtn = document.getElementById('copyEmail');
-  if (copyBtn) {
-    copyBtn.addEventListener('click', async () => {
-      try {
-        const email = 'manishprajapat01997@gmail.com';
-        await navigator.clipboard.writeText(email);
-        const old = copyBtn.textContent; copyBtn.textContent = 'Copied!';
-        setTimeout(() => copyBtn.textContent = old, 1500);
-      } catch (e) { alert('Could not copy.'); }
-    });
-  }
+                <article class="project elev">
+                <header>
+                    <h3>Wood & Furniture Loan Platform</h3>
+                    <p class="muted">
+                    E-commerce platform for modular wood and furniture loan management, enhancing online shopping and order lifecycle.
+                    </p>
+                </header>
+                <ul>
+                    <li>Managed end-to-end credit workflows and order lifecycle using service-layer architecture (DTO + MVT).</li>
+                    <li>Integrated **payment gateways** with retry & idempotency for secure transactions.</li>
+                    <li>Improved checkout stability, achieving **+12% cart-to-order conversion**.</li>
+                    <li>Supported modular furniture selections and optimized inventory for online store efficiency.</li>
+                </ul>
+                <div class="stack">
+                    <span class="badge">Django</span>
+                    <span class="badge">DRF</span>
+                    <span class="badge">React</span>
+                    <span class="badge">MySQL</span>
+                    <span class="badge">Flask</span>
+                </div>
+                </article>
+            </div>
+            </section>
 
-  // Back to top reveal on scroll
-  const toTop = document.getElementById('toTop');
-  const onScroll = () => { if (window.scrollY > 600) toTop.classList.add('show'); else toTop.classList.remove('show'); };
-  document.addEventListener('scroll', onScroll, { passive: true });
 
-  // Mobile drawer helpers
-  function closeDrawer(){ const cb = document.getElementById('menuToggle'); if (cb) cb.checked = false; }
-  window.closeDrawer = closeDrawer;
+            <!-- EXPERIENCE -->
+        
+            <section id="experience" class="reveal" aria-labelledby="exp-title">
+            <h2 id="exp-title">Experience</h2>
+            <div class="grid cols">
 
-  // Theme toggle with persistence
-  const THEME_KEY = 'mk-theme';
-  const html = document.documentElement;
-  function setTheme(mode){ html.setAttribute('data-theme', mode); localStorage.setItem(THEME_KEY, mode); }
-  function toggleTheme(){ const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light'; setTheme(next); }
-  document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
-  document.getElementById('themeToggleMobile')?.addEventListener('click', toggleTheme);
-  const saved = localStorage.getItem(THEME_KEY); if (saved) setTheme(saved);
-  window.toggleTheme = toggleTheme;
-</script>
-</body>
+                <!-- Current Company -->
+                <div class="timeline-item elev">
+                <h3>Web Developer — Digital Documentation Systems Pvt. Ltd</h3>
+                <div class="meta">Aug 2023 – Present · Remote‑first, product-based company</div>
+                <ul>
+                    <li>Architected and maintained **DRF backends** with **Celery/Redis** for task automation and **WebSockets** for real-time notifications.</li>
+                    <li>Processed large-scale financial data in **CSV, PDF, and XML formats**, enabling automated reconciliation and reporting for finance teams.</li>
+                    <li>Designed **live notification systems** for workflow updates, improving operational efficiency and user engagement.</li>
+                    <li>Developed structured logging and audit trails to support transparency and error tracking in production.</li>
+                </ul>
+                </div>
+
+                <!-- Previous Company -->
+                <div class="timeline-item elev">
+                <h3>Software Engineer — GravityTech</h3>
+                <div class="meta">Jan 2022 – Aug 2023</div>
+                <ul>
+                    <li>Delivered Python services using **Django, Flask, DRF**, and **React** UIs; optimized ORM queries and database indexes for performance.</li>
+                    <li>Owned database **migrations, schema design**, and **performance profiling** for MySQL-based applications.</li>
+                    <li>Developed and maintained **Healthcare Management Portal** with patient onboarding, staff scheduling, and automated record-keeping.</li>
+                    <li>Built **E-commerce Furniture Loan platform**, improving cart-to-order conversion by 12% and implementing secure payment workflows.</li>
+                </ul>
+                </div>
+
+            </div>
+            </section>
+
+
+            <!-- SKILLS -->
+            <!-- SKILLS -->
+            <section id="skills" class="reveal elev" aria-labelledby="skills-title" style="padding:16px">
+            <h2 id="skills-title">Skills</h2>
+            <div class="grid">
+                <!-- Languages & Frameworks -->
+                <div>
+                <p class="pill" aria-hidden="true">Languages & Frameworks</p>
+                <div class="chips" aria-label="Languages and frameworks">
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="24"> Python</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" width="24"> Django (DRF)</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="24"> React.js</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="24"> JavaScript</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="24"> HTML5</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="24"> CSS3</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" width="24"> GitHub Actions</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg"  width="24"> AWS</span>
+                </div>
+                </div>
+
+                <div>
+                <!-- Data, Messaging & Automation -->
+                <div>
+                <p class="pill" aria-hidden="true">Data, Messaging & Automation</p>
+                <div class="chips" aria-label="Data and tools">
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" width="24"> PostgreSQL</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="24"> MySQL/SQLite</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" width="24"> Redis</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" width="24"> Pandas / NumPy</span>            
+                    <span class="chip">Matplotlib</span>
+                    <span class="chip">Celery</span>
+                </div>
+                </div>
+
+                <!-- Other Tools -->
+                <div>
+                <p class="pill" aria-hidden="true">Other Tools & Utilities</p>
+                <div class="chips" aria-label="Other tools">            
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" width="24"> Postman</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="VS Code" width="24"> VS Code</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" alt="PyCharm" width="24"> PyCharm</span>
+                    <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="24"> Git / GitHub</span>
+                    <span class="chip">Tally ERP Integration</span>
+                    <span class="chip">WebSockets</span>
+                </div>
+                </div>
+            </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact" class="reveal" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact</h2>
+            <div class="grid cols">
+                <div class="elev" style="padding:16px">
+                <p><strong>Email:</strong> <a href="mailto:manishprajapat01997@gmail.com">manishprajapat01997@gmail.com</a></p>
+                <p><strong>Phone (Intl):</strong> <a href="tel:+919057640667">+91 90576 40667</a></p>
+                <p class="muted">Preference: remote‑first roles with overlapping hours; open to contract or full‑time.</p>
+                <div class="actions" style="margin-top:10px">
+                    <a class="btn github-btn" href="https://www.linkedin.com/in/manish-kumar-prajapat-248757282/" target="_blank" rel="noopener" style="padding:10px 16px; border-radius:8px; background-color:#0077B5; color:#fff; text-decoration:none;">LinkedIn</a>
+                    <a class="btn github-btn" href="https://github.com/manishprajapat01997" target="_blank" rel="noopener" style="padding:10px 16px; border-radius:8px; background-color:#333; color:#fff; text-decoration:none;">GitHub</a>
+                    <a class="btn primary" href="resume.pdf" download>Download CV</a>
+                </div>
+                </div>
+
+                <!-- ===== CONTACT FORM ===== -->            
+                <form id="contact-form" class="elev" style="padding:16px; display:flex; flex-direction:column; gap:12px;">
+
+                <!-- Name + Email in one line -->
+                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                    <input type="text" name="user_name" required autocomplete="name" placeholder="Your Name"
+                    style="flex:1; padding:10px; border-radius:8px; border:1px solid currentColor; background-color:inherit; color:inherit; font-size:14px;">
+                    <input type="email" name="user_email" required autocomplete="email" placeholder="Your Email"
+                    style="flex:1; padding:10px; border-radius:8px; border:1px solid currentColor; background-color:inherit; color:inherit; font-size:14px;">
+                </div>
+
+                <!-- Message textarea -->
+                <textarea name="message" rows="5" required placeholder="Your Message"
+                    style="padding:10px; border-radius:8px; border:1px solid currentColor; background-color:inherit; color:inherit; font-size:14px; resize:vertical;"></textarea>
+
+                <!-- Send Button aligned right -->
+                <div style="display:flex; justify-content:flex-end;">
+                <button type="submit" class="btn primary" 
+                    style="padding:8px 16px; border-radius:8px; font-weight:bold; cursor:pointer; font-size:14px;">
+                    Send
+                </button>
+                </div>
+                </form>
+            </div>
+            </section>
+
+            <footer class="container muted">© <span id="year"></span> Manish Kumar · All rights reserved</footer>
+        </main>
+
+        <button id="toTop" class="btn elev" aria-label="Back to top" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+        <!-- ===== EMAILJS SCRIPT ===== -->
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            /* ---------------- EMAIL JS ---------------- */
+            if (typeof emailjs !== "undefined") {
+                emailjs.init("a2GctLfs4zBXWsOrt"); // <-- Replace with your EmailJS public key
+                const form = document.getElementById("contact-form");
+                if (form) {
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault(); // prevent default submission
+                    emailjs.sendForm("service_75r1c0f", "template_208uf8c", this)
+                    .then(() => {
+                        alert("✅ Message sent successfully!");
+                        form.reset();
+                        window.location.reload();
+                    })
+                    .catch((err) => {
+                        alert("❌ Failed to send message: " + JSON.stringify(err));
+                        console.error(err);
+                    });
+                });
+                }
+            }
+
+            /* ---------------- FOOTER YEAR ---------------- */
+            const yearEl = document.getElementById("year");
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            /* ---------------- SCROLL REVEAL ---------------- */
+            const io = new IntersectionObserver(
+                (entries) => {
+                entries.forEach((e) => {
+                    if (e.isIntersecting) e.target.classList.add("show");
+                });
+                },
+                { threshold: 0.18 }
+            );
+            document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+            /* ---------------- COPY EMAIL ---------------- */
+            const copyBtn = document.getElementById("copyEmail");
+            if (copyBtn) {
+                copyBtn.addEventListener("click", async () => {
+                try {
+                    const email = "manishprajapat01997@gmail.com";
+                    await navigator.clipboard.writeText(email);
+                    const old = copyBtn.textContent;
+                    copyBtn.textContent = "Copied!";
+                    setTimeout(() => (copyBtn.textContent = old), 1500);
+                } catch (e) {
+                    alert("Could not copy.");
+                }
+                });
+            }
+
+            /* ---------------- BACK TO TOP ---------------- */
+            const toTop = document.getElementById("toTop");
+            if (toTop) {
+                const onScroll = () => {
+                if (window.scrollY > 600) toTop.classList.add("show");
+                else toTop.classList.remove("show");
+                };
+                document.addEventListener("scroll", onScroll, { passive: true });
+            }
+
+            /* ---------------- MOBILE MENU ---------------- */
+            const menuBtn = document.getElementById("menuBtn");
+            const mobileMenu = document.getElementById("mobileMenu");
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("active");
+                });
+                document.querySelectorAll("#mobileMenu a").forEach((link) => {
+                link.addEventListener("click", () => mobileMenu.classList.remove("active"));
+                });
+            }
+            window.closeDrawer = () => {
+                const cb = document.getElementById("menuToggle");
+                if (cb) cb.checked = false;
+            };
+
+            /* ---------------- THEME TOGGLE ---------------- */
+            const THEME_KEY = "mk-theme";
+            const html = document.documentElement;
+            function setTheme(mode) {
+                html.setAttribute("data-theme", mode);
+                localStorage.setItem(THEME_KEY, mode);
+            }
+            function toggleTheme() {
+                const next =
+                html.getAttribute("data-theme") === "light" ? "dark" : "light";
+                setTheme(next);
+            }
+            document.getElementById("themeToggle")?.addEventListener("click", toggleTheme);
+            document.getElementById("themeToggleMobile")?.addEventListener("click", toggleTheme);
+            const saved = localStorage.getItem(THEME_KEY);
+            if (saved) setTheme(saved);
+            window.toggleTheme = toggleTheme;
+            });
+        </script>
+    </body>
 </html>
-
