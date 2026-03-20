@@ -79,7 +79,16 @@
         /* ---------- UTIL ---------- */
         .container{max-width:1180px;margin-inline:auto;padding:24px 16px}
         .grid{display:grid;gap:16px}
-        .cols{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+        {% comment %} .cols{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))} {% endcomment %}
+        @media (max-width: 768px) {
+            .cols {
+                grid-template-columns: 1fr;  /* Force single column */
+            }
+
+            .project {
+                padding: 14px;
+            }
+            }
         .elev{background:var(--bg-elev);border:1px solid rgba(var(--border),.18);border-radius:var(--radius);box-shadow:var(--shadow)}
         .muted{color:var(--muted)}
         .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
@@ -854,7 +863,6 @@
         </script>
     </body>
 </html>
-
 
 
 
