@@ -79,15 +79,8 @@
         /* ---------- UTIL ---------- */
         .container{max-width:1180px;margin-inline:auto;padding:24px 16px}
         .grid{display:grid;gap:16px}
-        {% comment %} .cols{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))} {% endcomment %}
-        @media (max-width: 768px) {
-            .cols {
-                grid-template-columns: 1fr;  /* Force single column */
-            }
-
-            .project {
-                padding: 14px;
-            }
+        .cols{
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
         .elev{background:var(--bg-elev);border:1px solid rgba(var(--border),.18);border-radius:var(--radius);box-shadow:var(--shadow)}
         .muted{color:var(--muted)}
@@ -236,6 +229,35 @@
         @media (max-width: 860px) {
             .desktop-links { display: none; }
             .hamburger { display: inline-block; }
+        }
+        
+        /* ---------- MOBILE FIXES ---------- */
+        @media (max-width:768px){
+
+        /* ✅ SINGLE COLUMN */
+        .cols{
+            grid-template-columns:1fr;
+        }
+
+        .project{
+            padding:14px;
+        }
+
+        /* ✅ CRITICAL FIX (YOUR MAIN ISSUE) */
+        .reveal{
+            opacity:1 !important;
+            transform:none !important;
+        }
+
+        /* Better readability */
+        .project p,
+        .project li{
+            font-size:0.9rem;
+        }
+
+        .project h3{
+            font-size:1rem;
+        }
         }
 
     </style>
